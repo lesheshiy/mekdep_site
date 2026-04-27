@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Exam Interface | The Academic Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#0040a1",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#ccd8ff",
+                        "outline": "#737785",
+                        "on-secondary-container": "#4e6874",
+                        "surface-bright": "#f8f9fa",
+                        "primary": "#0040a1",
+                        "on-secondary-fixed": "#021f29",
+                        "primary-container": "#0056d2",
+                        "on-primary-fixed": "#001847",
+                        "surface-variant": "#e1e3e4",
+                        "secondary": "#48626e",
+                        "background": "#f8f9fa",
+                        "surface-dim": "#d9dadb",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#dae2ff",
+                        "on-surface-variant": "#424654",
+                        "inverse-surface": "#2e3132",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#b2c5ff",
+                        "tertiary": "#822800",
+                        "on-surface": "#191c1d",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#cbe7f5",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "on-background": "#191c1d",
+                        "tertiary-fixed": "#ffdbcf",
+                        "secondary-fixed": "#cbe7f5",
+                        "surface-container-low": "#f3f4f5",
+                        "on-tertiary-fixed": "#380d00",
+                        "on-secondary-fixed-variant": "#304a55",
+                        "secondary-fixed-dim": "#afcbd8",
+                        "surface-tint": "#0056d2",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#812800",
+                        "surface-container": "#edeeef",
+                        "outline-variant": "#c3c6d6",
+                        "inverse-on-surface": "#f0f1f2",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "tertiary-container": "#a93802",
+                        "on-tertiary-container": "#ffcebd",
+                        "surface": "#f8f9fa"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden">
+<!-- TopNavBar (Shared Component) - Transactional suppression check: Present for title & Exit anchor -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl flex justify-between items-center w-full px-8 h-16 docked full-width top-0 sticky z-50 tonal shift from surface to surface-container-low transition-colors duration-600 ease-in-out">
+<div class="flex items-center gap-6">
+<span class="text-xl font-bold tracking-tight text-blue-900 dark:text-blue-100">The Academic Editorial</span>
+<div class="h-6 w-px bg-outline-variant/30"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">timer</span>
+<span class="font-headline font-bold text-lg text-primary tracking-tight">42:15</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex flex-col items-end mr-4">
+<span class="text-[0.75rem] font-medium uppercase tracking-[0.05em] text-slate-500">EXAM SESSION</span>
+<span class="text-sm font-semibold text-on-surface">Advanced Macroeconomics IV</span>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 rounded-xl text-slate-500 hover:bg-slate-100/50 transition-colors">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm font-medium">Exit</span>
+</button>
+</div>
+</header>
+<main class="max-w-5xl mx-auto px-6 py-12">
+<!-- Progress Indicator Section -->
+<div class="mb-16">
+<div class="flex justify-between items-end mb-6">
+<div>
+<span class="text-[0.75rem] font-bold uppercase tracking-[0.05em] text-primary">Progress</span>
+<h2 class="text-3xl font-headline font-extrabold text-on-surface mt-1">Question 14 <span class="text-outline-variant font-medium">/ 30</span></h2>
+</div>
+<div class="text-right">
+<span class="text-[0.75rem] font-bold uppercase tracking-[0.05em] text-slate-500">Completion</span>
+<p class="text-lg font-headline font-bold text-on-surface mt-1">46%</p>
+</div>
+</div>
+<div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary transition-all duration-700 ease-in-out" style="width: 46%;"></div>
+</div>
+</div>
+<!-- Single Question Interface -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Column: The Content -->
+<div class="lg:col-span-8 space-y-10">
+<section class="space-y-6">
+<span class="inline-flex items-center justify-center w-12 h-12 bg-primary text-white rounded-xl font-headline text-xl font-extrabold">14</span>
+<h3 class="text-2xl font-headline font-bold leading-snug text-on-surface">
+                        Given the current inflationary pressure within the Eurozone, which monetary policy instrument would the European Central Bank (ECB) most likely utilize to anchor long-term inflation expectations while minimizing credit market volatility?
+                    </h3>
+<div class="rounded-2xl overflow-hidden shadow-sm">
+<img class="w-full h-64 object-cover" data-alt="abstract financial data visualization showing a blue upward trending line graph over a soft grayscale architectural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo-RoJSPRxSi_XLId015b20cPCPARaeqfRxtpQbbx2baBNBqCnjhA6P66cWliHZYB4IdeM8n1br81MAGpXK24oyqyCnRWUudiPhhe4iuW8h0SihfM-VyzJO8UrE_ST0ua497LRaXLtW2w-HbasfcI8h16PdtDtmjb7dCxh4kofDEv3ZY41w54W7xopX2YyjyQGz0Zfmrk7h8sys_ayTiLUS9kIQ8fltbiOa7VxrBzFz-7ffPtaAyTUmD-HBD4RO9xNJzadWwLHhrdH"/>
+</div>
+</section>
+<div class="space-y-3">
+<!-- Option A -->
+<label class="group relative flex items-center p-6 bg-surface-container-lowest hover:bg-surface-container-low rounded-xl cursor-pointer transition-all duration-300">
+<input class="hidden peer" name="exam_option" type="radio"/>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center transition-all mr-6">
+<div class="w-2 h-2 bg-white rounded-full scale-0 peer-checked:scale-100 transition-transform"></div>
+</div>
+<span class="text-lg font-medium text-on-surface leading-tight">Implementation of targeted longer-term refinancing operations (TLTROs).</span>
+<div class="absolute inset-0 rounded-xl border-2 border-transparent peer-checked:border-primary/20 pointer-events-none"></div>
+</label>
+<!-- Option B -->
+<label class="group relative flex items-center p-6 bg-surface-container-lowest hover:bg-surface-container-low rounded-xl cursor-pointer transition-all duration-300">
+<input class="hidden peer" name="exam_option" type="radio"/>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center transition-all mr-6">
+<div class="w-2 h-2 bg-white rounded-full scale-0 peer-checked:scale-100 transition-transform"></div>
+</div>
+<span class="text-lg font-medium text-on-surface leading-tight">A symmetric increase in the three key ECB interest rates by 50 basis points.</span>
+<div class="absolute inset-0 rounded-xl border-2 border-transparent peer-checked:border-primary/20 pointer-events-none"></div>
+</label>
+<!-- Option C (Active State Mockup) -->
+<label class="group relative flex items-center p-6 bg-surface-container-lowest border-primary/20 rounded-xl cursor-pointer transition-all duration-300 ring-1 ring-primary/10">
+<input checked="" class="hidden peer" name="exam_option" type="radio"/>
+<div class="w-6 h-6 rounded-full border-2 border-primary bg-primary flex items-center justify-center transition-all mr-6">
+<div class="w-2 h-2 bg-white rounded-full scale-100 transition-transform"></div>
+</div>
+<span class="text-lg font-bold text-on-surface leading-tight">Reinvestment of principal payments from maturing securities purchased under the APP.</span>
+<div class="absolute inset-0 rounded-xl border-2 border-primary/20 pointer-events-none"></div>
+</label>
+<!-- Option D -->
+<label class="group relative flex items-center p-6 bg-surface-container-lowest hover:bg-surface-container-low rounded-xl cursor-pointer transition-all duration-300">
+<input class="hidden peer" name="exam_option" type="radio"/>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center transition-all mr-6">
+<div class="w-2 h-2 bg-white rounded-full scale-0 peer-checked:scale-100 transition-transform"></div>
+</div>
+<span class="text-lg font-medium text-on-surface leading-tight">Downward adjustment of the reserve requirement ratio for commercial banks.</span>
+<div class="absolute inset-0 rounded-xl border-2 border-transparent peer-checked:border-primary/20 pointer-events-none"></div>
+</label>
+</div>
+</div>
+<!-- Right Column: Meta-tools & Navigator -->
+<div class="lg:col-span-4 sticky top-28 space-y-6">
+<!-- Navigation Grid -->
+<div class="bg-surface-container-low p-8 rounded-2xl">
+<h4 class="text-[0.75rem] font-bold uppercase tracking-[0.05em] text-slate-500 mb-6">Question Map</h4>
+<div class="grid grid-cols-5 gap-2">
+<!-- Iterative Mockup of Grid -->
+<div class="w-full aspect-square flex items-center justify-center rounded-lg bg-primary/10 text-primary text-sm font-bold">01</div>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg bg-primary/10 text-primary text-sm font-bold">02</div>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg bg-primary/10 text-primary text-sm font-bold">03</div>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg bg-primary/10 text-primary text-sm font-bold">04</div>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg bg-primary/10 text-primary text-sm font-bold">05</div>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg bg-primary/10 text-primary text-sm font-bold">06</div>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg bg-primary/10 text-primary text-sm font-bold">07</div>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg bg-primary/10 text-primary text-sm font-bold">08</div>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg bg-primary/10 text-primary text-sm font-bold">09</div>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg bg-primary/10 text-primary text-sm font-bold">10</div>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg bg-primary/10 text-primary text-sm font-bold">11</div>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg bg-primary/10 text-primary text-sm font-bold">12</div>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg bg-primary/10 text-primary text-sm font-bold">13</div>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg bg-primary text-white text-sm font-bold ring-4 ring-primary/20">14</div>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg bg-white border border-outline-variant/30 text-slate-400 text-sm font-medium">15</div>
+<!-- ... more dots implied -->
+</div>
+<div class="mt-8 flex gap-4 text-xs font-semibold text-slate-500 uppercase tracking-widest">
+<div class="flex items-center gap-1.5"><div class="w-2.5 h-2.5 bg-primary rounded-full"></div> Current</div>
+<div class="flex items-center gap-1.5"><div class="w-2.5 h-2.5 bg-primary/20 rounded-full"></div> Answered</div>
+<div class="flex items-center gap-1.5"><div class="w-2.5 h-2.5 bg-white border border-outline-variant rounded-full"></div> Unread</div>
+</div>
+</div>
+<!-- Action Card -->
+<div class="p-6 bg-tertiary-container text-on-tertiary-container rounded-2xl">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined mt-1">flag</span>
+<div>
+<p class="font-bold text-sm">Flag for review</p>
+<p class="text-xs opacity-80 mt-1">Mark this question to revisit it later before final submission.</p>
+</div>
+</div>
+<button class="w-full mt-4 py-2 border border-on-tertiary-container/30 rounded-xl text-sm font-bold hover:bg-on-tertiary-container/10 transition-colors">Toggle Flag</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Action Bar (Floating Logic) -->
+<footer class="fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-2xl px-8 py-6 z-40 tonal shift from surface to surface-container-low">
+<div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-4">
+<button class="px-8 py-4 rounded-xl font-bold text-primary hover:bg-primary/5 transition-all flex items-center gap-2 group">
+<span class="material-symbols-outlined transition-transform group-hover:-translate-x-1">arrow_back</span>
+                    Previous
+                </button>
+<div class="hidden md:block w-px h-8 bg-outline-variant/20"></div>
+<div class="hidden md:flex flex-col">
+<span class="text-[0.65rem] font-bold text-slate-500 uppercase tracking-widest">Next Topic</span>
+<span class="text-sm font-semibold">Fiscal Policy Constraints</span>
+</div>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto">
+<button class="flex-1 md:flex-none px-8 py-4 bg-primary text-white rounded-xl font-headline font-extrabold text-lg flex items-center justify-center gap-3 shadow-xl shadow-primary/10 hover:shadow-2xl hover:shadow-primary/20 transition-all group">
+                    Next Question
+                    <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+<button class="px-8 py-4 bg-on-surface text-white rounded-xl font-headline font-bold text-lg hover:bg-on-surface/90 transition-all">
+                    Submit Exam
+                </button>
+</div>
+</div>
+</footer>
+<!-- Overlay "Soft Focus" Background Detail -->
+<div class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 bg-surface">
+<div class="absolute top-[-10%] right-[-5%] w-[40%] h-[60%] bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[30%] h-[50%] bg-secondary/5 rounded-full blur-[120px]"></div>
+</div>
+</body></html>

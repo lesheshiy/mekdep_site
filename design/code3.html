@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard | The Academic Editorial</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#0040a1",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#ccd8ff",
+                        "outline": "#737785",
+                        "on-secondary-container": "#4e6874",
+                        "surface-bright": "#f8f9fa",
+                        "primary": "#0040a1",
+                        "on-secondary-fixed": "#021f29",
+                        "primary-container": "#0056d2",
+                        "on-primary-fixed": "#001847",
+                        "surface-variant": "#e1e3e4",
+                        "secondary": "#48626e",
+                        "background": "#f8f9fa",
+                        "surface-dim": "#d9dadb",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#dae2ff",
+                        "on-surface-variant": "#424654",
+                        "inverse-surface": "#2e3132",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#b2c5ff",
+                        "tertiary": "#822800",
+                        "on-surface": "#191c1d",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#cbe7f5",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "on-background": "#191c1d",
+                        "tertiary-fixed": "#ffdbcf",
+                        "secondary-fixed": "#cbe7f5",
+                        "surface-container-low": "#f3f4f5",
+                        "on-tertiary-fixed": "#380d00",
+                        "on-secondary-fixed-variant": "#304a55",
+                        "secondary-fixed-dim": "#afcbd8",
+                        "surface-tint": "#0056d2",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#812800",
+                        "surface-container": "#edeeef",
+                        "outline-variant": "#c3c6d6",
+                        "inverse-on-surface": "#f0f1f2",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "tertiary-container": "#a93802",
+                        "on-tertiary-container": "#ffcebd",
+                        "surface": "#f8f9fa"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 32px 64px rgba(25, 28, 29, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/20">
+<!-- SideNavBar (Desktop) -->
+<aside class="hidden md:flex flex-col fixed left-0 top-0 h-screen p-6 overflow-y-auto bg-slate-50 dark:bg-slate-950 w-64 z-40">
+<div class="mb-6">
+<h1 class="text-lg font-black text-blue-900 dark:text-white">The Academic Editorial</h1>
+<p class="text-xs font-medium text-slate-500 uppercase tracking-widest mt-1">Premium Educational Workspace</p>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Active State: Dashboard -->
+<a class="flex items-center gap-3 px-4 py-3 text-blue-800 dark:text-blue-300 font-semibold bg-white dark:bg-slate-900 shadow-sm rounded-lg transition-all scale-98 hover:bg-blue-50/50" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-200 transition-all hover:bg-blue-50/50 rounded-lg" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="text-sm">Exams</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-200 transition-all hover:bg-blue-50/50 rounded-lg" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm">Results</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-200 transition-all hover:bg-blue-50/50 rounded-lg" href="#">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="text-sm">Approvals</span>
+</a>
+</nav>
+<div class="mt-auto">
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-white py-3 rounded-xl font-semibold shadow-lg hover:brightness-110 transition-all">
+                Create New Exam
+            </button>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="md:ml-64 min-h-screen">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-8 h-16 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl sticky top-0 z-50">
+<div class="flex items-center gap-6">
+<h2 class="text-xl font-bold tracking-tight text-blue-900 dark:text-blue-100">The Academic Editorial</h2>
+<div class="hidden lg:flex items-center bg-surface-container-low px-4 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-slate-400 text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-64" placeholder="Search resources..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-100/50 transition-colors rounded-full relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-tertiary rounded-full"></span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-100/50 transition-colors rounded-full">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden ml-2 ring-2 ring-surface-container-high">
+<img alt="User Profile" data-alt="Close up portrait of a young professional woman smiling confidently in a modern bright office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvE9lqX8HEGiy2ik-I2Ggos2K-hjJEBpUOYcC3jt-UicKc3on8HymsPzhf67xY24PYnydBzd8EhugTxcJ8cHdhE_9bvlFlM1cJ98zHr5qG1pwxLp-C3c1WwEAWyPNSBF94GAwtr3n3wg2yGSa4qYH-38qt6j1bKjE7xWwI2lP8SoXMhL9DGP8rR4aAtRh7E0Y9HK1AZJmfFTDKjRTHwrSIGFhaiUIQ3sTarJMSLwNfUvfNeMcH2VRRfn4WcD4dQt0Plhe-ybtBPcr3"/>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<div class="p-8 max-w-7xl mx-auto space-y-12">
+<!-- Hero Greeting -->
+<section class="space-y-2">
+<span class="text-xs font-bold tracking-[0.1em] uppercase text-primary/70 font-label">Student Portal</span>
+<h1 class="text-4xl font-extrabold font-headline text-on-surface tracking-tight">Welcome back, Alexandra.</h1>
+<p class="text-secondary text-lg max-w-2xl">You have two exams scheduled for this week. Your recent progress in <span class="font-semibold text-primary underline decoration-2 underline-offset-4">Advanced Epistemology</span> is exceptional.</p>
+</section>
+<!-- Bento Layout Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Main Focus: Upcoming Exams -->
+<div class="md:col-span-8 space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="text-xl font-bold font-headline">Upcoming Examinations</h3>
+<a class="text-sm font-semibold text-primary hover:underline underline-offset-4" href="#">View Schedule</a>
+</div>
+<div class="space-y-4">
+<!-- Exam Card 1 -->
+<div class="bg-surface-container-lowest editorial-shadow p-6 rounded-xl border border-transparent hover:border-outline-variant/15 transition-all group">
+<div class="flex flex-col md:flex-row justify-between gap-6">
+<div class="space-y-4 flex-1">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest rounded-full">Proctored</span>
+<span class="text-xs text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+                                            Oct 24, 2023 • 09:00 AM
+                                        </span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-on-surface group-hover:text-primary transition-colors">Quantum Mechanics III: Particle Theory</h4>
+<p class="text-secondary text-sm mt-1">Faculty of Science • Advanced Stream</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="text-right hidden sm:block">
+<div class="text-xs font-bold text-secondary uppercase tracking-tighter">Status</div>
+<div class="text-sm font-semibold text-on-surface">Registration Confirmed</div>
+</div>
+<button class="bg-surface-container-highest text-on-surface px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-surface-dim transition-colors">
+                                        View Syllabus
+                                    </button>
+</div>
+</div>
+</div>
+<!-- Exam Card 2 -->
+<div class="bg-surface-container-lowest editorial-shadow p-6 rounded-xl border border-transparent hover:border-outline-variant/15 transition-all group">
+<div class="flex flex-col md:flex-row justify-between gap-6">
+<div class="space-y-4 flex-1">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 bg-secondary/10 text-secondary text-[10px] font-bold uppercase tracking-widest rounded-full">Open Book</span>
+<span class="text-xs text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+                                            Oct 28, 2023 • 02:00 PM
+                                        </span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-on-surface group-hover:text-primary transition-colors">Modern Literary Criticism</h4>
+<p class="text-secondary text-sm mt-1">Department of Humanities • Year 4</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-white px-6 py-2.5 rounded-lg font-bold text-sm shadow-md hover:brightness-110 transition-all">
+                                        Start Mock Test
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar: Approvals for Retake -->
+<div class="md:col-span-4 space-y-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">verified_user</span>
+<h3 class="text-xl font-bold font-headline">Approved Retakes</h3>
+</div>
+<div class="bg-tertiary-fixed p-6 rounded-xl space-y-4 border border-tertiary-fixed-dim">
+<div class="flex items-start gap-4">
+<div class="bg-white p-2 rounded-lg text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">history</span>
+</div>
+<div class="space-y-1">
+<p class="text-sm font-bold text-on-tertiary-fixed">Applied Econometrics</p>
+<p class="text-xs text-on-tertiary-fixed-variant">Deadline to register: Nov 05</p>
+</div>
+</div>
+<p class="text-xs leading-relaxed text-on-tertiary-fixed-variant">Your appeal for a Grade Improvement Retake has been approved by the Dean of Students. Please confirm your attendance by Friday.</p>
+<button class="w-full bg-white text-on-tertiary-fixed py-2 rounded-lg text-xs font-bold hover:bg-on-tertiary transition-colors">Confirm Retake</button>
+</div>
+<!-- Small Stat Card -->
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/10">
+<div class="text-xs font-bold text-secondary uppercase tracking-[0.1em] mb-4">Course Progress</div>
+<div class="flex items-end justify-between mb-2">
+<span class="text-3xl font-extrabold font-headline">88%</span>
+<span class="text-xs font-medium text-primary">+4% from last week</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-700" style="width: 88%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Full Width Section: Past Results -->
+<section class="space-y-8 pt-6">
+<div class="flex items-end justify-between">
+<div>
+<h3 class="text-2xl font-bold font-headline">Academic History</h3>
+<p class="text-secondary text-sm">Review your curated performance metrics and faculty feedback.</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 border border-outline-variant rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+</button>
+<button class="p-2 border border-outline-variant rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Result Card 1 -->
+<div class="bg-surface-container-lowest editorial-shadow rounded-2xl overflow-hidden group">
+<div class="p-6 space-y-6">
+<div class="flex justify-between items-start">
+<div class="bg-primary/5 p-3 rounded-xl">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">analytics</span>
+</div>
+<div class="text-right">
+<span class="text-4xl font-black font-headline text-primary italic">A+</span>
+<div class="text-[10px] font-bold text-secondary uppercase tracking-widest mt-1">Top 3% of Class</div>
+</div>
+</div>
+<div>
+<h5 class="text-lg font-bold">Introduction to Cognitive Science</h5>
+<p class="text-xs text-secondary mt-1">Final Examination • Term 2</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl">
+<p class="text-sm italic text-secondary leading-relaxed">
+                                    "Your analysis of neural plasticity was particularly insightful. Excellent command of the core literature."
+                                </p>
+<div class="mt-3 flex items-center gap-2">
+<img alt="Professor" class="w-5 h-5 rounded-full" data-alt="Professional headshot of an elderly professor with gray hair and glasses, wearing a tweed jacket" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0je6anA_vQWU6WWnCvizLmJuohRMQUaUwPYC6vu9Y5gZDkD946xV3IXRjVEENrkOGmesH3mftCR_gq5ljkHBxjm22ogiMz48Z7lGba0tlDavSSYv0yAdfLNIts_IAp7V5buuqVGQ6rX42NCmM1BJ1juZi-tFOMJNICjxvCB7jyYLLr8_mHgovcNLz_NrwTynjcHZvWmmt5Jl-bZNYlqkv3SKnT_sG5zgxzJKgpn9Amb3JV6cpwcNVnQH2T1USQGgNJA4pxdJs07sH"/>
+<span class="text-[10px] font-bold text-on-surface">Dr. Silas Thorne</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Result Card 2 -->
+<div class="bg-surface-container-lowest editorial-shadow rounded-2xl overflow-hidden group">
+<div class="p-6 space-y-6">
+<div class="flex justify-between items-start">
+<div class="bg-primary/5 p-3 rounded-xl">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">data_exploration</span>
+</div>
+<div class="text-right">
+<span class="text-4xl font-black font-headline text-secondary italic">B</span>
+<div class="text-[10px] font-bold text-secondary uppercase tracking-widest mt-1">Standard Pass</div>
+</div>
+</div>
+<div>
+<h5 class="text-lg font-bold">Structural Engineering Fundamentals</h5>
+<p class="text-xs text-secondary mt-1">Midterm Assessment • Term 1</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl">
+<p class="text-sm italic text-secondary leading-relaxed">
+                                    "Calculation accuracy was high, but conceptual diagrams could be clearer. Focus on visual communication next time."
+                                </p>
+<div class="mt-3 flex items-center gap-2">
+<img alt="Professor" class="w-5 h-5 rounded-full" data-alt="Portrait of a female engineering professor with glasses, looking professional and encouraging in a classroom setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3QoPr4Ud3rIGfiELh2VDrgq7YcSxROjzr0LR27N1k68slvEfSJuoSCnNk4_CYVobfu3jATPufX2kbqFVK34x9eekSRwBI4e1sDDF-Op8GWqMpTcC3fWDhMQr6GWHupjZ-LeFeJC0CIhe3DZhZEJaLgu75NJWyMcr4-RbzKS4-g4TxOcyFqHktsj_hzqLyrpzm_blzVcFDh0IuBEs-_fMHb1HCb_TsmhVcxKcRcPAdyrNFTlHWVSdtgdyVOp9UeOtqxokULHijvjo_"/>
+<span class="text-[10px] font-bold text-on-surface">Prof. Elena Vazquez</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Result Card 3 -->
+<div class="bg-surface-container-lowest editorial-shadow rounded-2xl overflow-hidden group">
+<div class="p-6 space-y-6">
+<div class="flex justify-between items-start">
+<div class="bg-primary/5 p-3 rounded-xl">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div class="text-right">
+<span class="text-4xl font-black font-headline text-primary italic">A</span>
+<div class="text-[10px] font-bold text-secondary uppercase tracking-widest mt-1">Exceeds Expectations</div>
+</div>
+</div>
+<div>
+<h5 class="text-lg font-bold">Moral Philosophy &amp; Ethics</h5>
+<p class="text-xs text-secondary mt-1">Coursework Portfolio • Term 2</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl">
+<p class="text-sm italic text-secondary leading-relaxed">
+                                    "Deeply empathetic engagement with utilitarian frameworks. A pleasure to review your final essay."
+                                </p>
+<div class="mt-3 flex items-center gap-2">
+<img alt="Professor" class="w-5 h-5 rounded-full" data-alt="Middle-aged male philosophy professor in a scholarly pose, sitting in front of a wall of books" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYhZRO2JCvT9emT4UQ9xmpKHtL71EL-gjp-HYMX3dXkULjw8Sv741Cipxdr3qKAx8TwVlCJCj0zR8qv0W5JS1xxskbAmJSyAnZDYs-e57VmQcs_w8Ay9T1qdRvOFAO50Iu6T6b4cYgNgQ1QPgdIz7zLiis9ZddYEySNPXWQ8S0TT9fuot_slE62_HtAizbLXvgWVwF3_wJmEOrl6caHR6w3RtSUMUsVdajE9sxN3w9DGD4v1Sr6rWJk-1uaejgTNJ0oUtjK49SyuEJ"/>
+<span class="text-[10px] font-bold text-on-surface">Dr. Julian Rhodes</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer -->
+<footer class="mt-12 py-12 px-8 border-t border-outline-variant/10 bg-white">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-center md:text-left">
+<p class="text-lg font-bold text-primary font-headline">The Academic Editorial</p>
+<p class="text-xs text-secondary mt-1 uppercase tracking-widest">Global Educational Standard © 2023</p>
+</div>
+<div class="flex gap-8 text-xs font-bold text-secondary uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Academic Integrity</a>
+<a class="hover:text-primary transition-colors" href="#">Support Desk</a>
+</div>
+</div>
+</footer>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-xl flex justify-around items-center h-16 px-4 z-50">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Exams</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Results</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Approvals</span>
+</a>
+</nav>
+</body></html>
