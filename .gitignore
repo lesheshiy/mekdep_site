@@ -1,0 +1,17 @@
+# Dependencies
+frontend/node_modules/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Django
+*.sqlite3
+
+# Environment
+.env
+.env.local
+
+# Build output
+frontend/dist/
